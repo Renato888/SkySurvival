@@ -31,52 +31,53 @@ public class Fuciones : MonoBehaviour
         }
 
         //Paso 1 - Función void Sencilla
-        void ImprimeValor()
+        
+    }
+    void ImprimeValor()
+    {
+        int tempValue = RandomValue();
+        print("Valor temporal es: " + tempValue);
+    }
+
+
+    void ImprimeValorDoble()
+    {
+        valor1 = RandomValue();
+        valor2 = RandomValue();
+    }
+    //Paso 2 - Función con parámetros
+    void ImprimeCualEsMayor(int val1, int val2)
+    {
+        if (val1 > val2)
         {
-            int tempValue = RandomValue();
-            print("Valor temporal es: " + tempValue);
+            print("El valor 1 es MAYOR que le valor 2");
         }
-
-
-        void ImprimeValorDoble()
+        else if (val1 == val2)
         {
-            valor1 = RandomValue();
-            valor2 = RandomValue();
+            print("El valor 1 y 2 son IGUALES");
         }
-        //Paso 2 - Función con parámetros
-        void ImprimeCualEsMayor(int val1, int val2)
+        else
         {
-            if (val1 > val2)
-            {
-                print("El valor 1 es MAYOR que le valor 2");
-            }
-            else if (val1 == val2)
-            {
-                print("El valor 1 y 2 son IGUALES");
-            }
-            else
-            {
-                print("El valor 1 es MENOR que el valor 2");
-            }
+            print("El valor 1 es MENOR que el valor 2");
         }
+    }
 
-        int RandomValue()
-        {
-            return Random.Range(0, 1000);
-        }
+    int RandomValue()
+    {
+        return Random.Range(0, 1000);
+    }
 
-        int RandomValue(int multiple)
-        {
-            int temp = Random.Range(0, 1000);
-            temp = temp * multiple;
+    int RandomValue(int multiple)
+    {
+        int temp = Random.Range(0, 1000);
+        temp = temp * multiple;
 
-            return temp;
-        }
+        return temp;
+    }
 
 
-        string Mensaje()
-        {
-            return "Hola";
-        }
+    string Mensaje()
+    {
+        return "Hola";
     }
 }
