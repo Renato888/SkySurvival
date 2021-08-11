@@ -13,6 +13,8 @@ public class PlayerControler : MonoBehaviour
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        direccion = 1;
+        FlipSprite();
     }
 
     
@@ -43,10 +45,30 @@ public class PlayerControler : MonoBehaviour
     void MovementInput()
     {
         InputValue = new Vector2(Input.GetAxisRaw("Horizontal")*moveSpeed, rigidBody.velocity.y);
+
+        if (InputValue.x > 0)
+        {
+            direccion = 1;
+            FlipSprite();
+        }
+        else if (InputValue.x < 0)
+        {
+            direccion = -1;
+            FlipSprite();
+        }
+        //else
+        //{
+        //    direccion = 0;
+        //}
     }
 
     void MovementAction()
     {
         rigidBody.velocity = InputValue;
+    }
+
+    void FlipSprite()
+    {
+        transform.eulerAngles = new Vector3(0, direccion == 1 ? 180f : 0, 0);
     }
 }
