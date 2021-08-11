@@ -6,9 +6,17 @@ using UnityEngine;
 public class PlayerControler : MonoBehaviour
 {
     public Rigidbody2D rigidBody;
+
+
+    [Header("Movement Properties")]
     public int direccion;
     public float moveSpeed;
-    Vector2 InputValue;
+
+    [Header("Jump Properties")]
+    public float jumpForce;
+    public bool jumpInputOn;
+
+    public Vector2 InputValue;
 
     void Start()
     {
@@ -21,13 +29,25 @@ public class PlayerControler : MonoBehaviour
     void Update()
     {
         MovementInput();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpInputOn = true;
+        }
     }
 
     private void FixedUpdate()
     {
         MovementAction();
+
+        if (jumpInputOn)
+        {
+            Jump();
+            jumpInputOn = false;
+        }
     }
 
+    #region Movement
     void Movement_1()
     {
         if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.LeftArrow)))
@@ -66,7 +86,16 @@ public class PlayerControler : MonoBehaviour
     {
         rigidBody.velocity = InputValue;
     }
+    #endregion
 
+    #region Jump
+
+    void Jump()
+    {
+        rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpForce);
+    }
+
+    #endregion
     void FlipSprite()
     {
         transform.eulerAngles = new Vector3(0, direccion == 1 ? 180f : 0, 0);
