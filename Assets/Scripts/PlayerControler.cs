@@ -16,11 +16,21 @@ public class PlayerControler : MonoBehaviour
     public float jumpForce;
     public bool jumpInputOn;
 
-    public Vector2 InputValue;
+    [Header("Ground Check Properties")]
+    public Transform groundCheckPoint;
+    public float radius;
+    public LayerMask whatIsGround;
+    public bool isGrounded;
+
+    [Header("Doble Jump Properties")]
+    public bool doubleJump=true;
+
+    Vector2 InputValue;
 
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        doubleJump = true;
         direccion = 1;
         FlipSprite();
     }
@@ -39,6 +49,8 @@ public class PlayerControler : MonoBehaviour
     private void FixedUpdate()
     {
         MovementAction();
+
+        GroundCheck();
 
         if (jumpInputOn)
         {
@@ -90,14 +102,37 @@ public class PlayerControler : MonoBehaviour
 
     #region Jump
 
+    void GroundCheck()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, radius, whatIsGround);
+
+        if (isGrounded)
+        {
+            doubleJump = true;
+        }
+    }
+
     void Jump()
     {
-        rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpForce);
+        if (isGrounded)
+            rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpForce);
+        else if (doubleJump)
+        {
+            rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpForce);
+            doubleJump = false;
+        }
+        
     }
 
     #endregion
     void FlipSprite()
     {
         transform.eulerAngles = new Vector3(0, direccion == 1 ? 180f : 0, 0);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(1, 0, 0);
+        Gizmos.DrawSphere(groundCheckPoint.position, radius);
     }
 }
