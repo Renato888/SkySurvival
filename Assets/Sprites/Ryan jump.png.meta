@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: e969e93d2fdcb6a4ba7119e01887dcb3
+guid: 6a2a438c66749f94d97873447b63393b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3822661479711228497
-    second: Ryan espera_0
+      213: -2378055835979872168
+    second: Ryan jump_0
   - first:
-      213: -8695554734771987162
-    second: Ryan espera_1
+      213: -8260417855463687782
+    second: Ryan jump_1
   - first:
-      213: -5926971758844692882
-    second: Ryan espera_2
+      213: -3071896797583697858
+    second: Ryan jump_2
   - first:
-      213: 4839412859759377281
-    second: Ryan espera_3
+      213: -3914073150517519551
+    second: Ryan jump_3
   - first:
-      213: 3430543681139578442
-    second: Ryan espera_4
+      213: 1404878003424016014
+    second: Ryan jump_4
   - first:
-      213: 9151174553058588179
-    second: Ryan espera_5
+      213: -8720904142790177
+    second: Ryan jump_5
+  - first:
+      213: 8053089822020385361
+    second: Ryan jump_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,31 +108,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ryan espera_0
+      name: Ryan jump_0
       rect:
         serializedVersion: 2
         x: 8
-        y: 32
-        width: 14
-        height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fad3e3533ad23fac0800000000000000
-      internalID: -3822661479711228497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ryan espera_1
-      rect:
-        serializedVersion: 2
-        x: 40
         y: 32
         width: 14
         height: 30
@@ -140,17 +122,59 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62d13fc2a0f235780800000000000000
-      internalID: -8695554734771987162
+      spriteID: 858006011d27ffed0800000000000000
+      internalID: -2378055835979872168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ryan espera_2
+      name: Ryan jump_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 32
+        width: 15
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99faccd9b91d5d80800000000000000
+      internalID: -8260417855463687782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ryan jump_2
       rect:
         serializedVersion: 2
         x: 72
+        y: 32
+        width: 17
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e381d51632e6e55d0800000000000000
+      internalID: -3071896797583697858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ryan jump_3
+      rect:
+        serializedVersion: 2
+        x: 104
         y: 32
         width: 14
         height: 31
@@ -161,19 +185,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e663a48769a2fbda0800000000000000
-      internalID: -5926971758844692882
+      spriteID: 14b528e053b6ea9c0800000000000000
+      internalID: -3914073150517519551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ryan espera_3
+      name: Ryan jump_4
       rect:
         serializedVersion: 2
         x: 8
         y: 0
-        width: 14
+        width: 17
         height: 31
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -182,17 +206,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18b3a6b0b5c092340800000000000000
-      internalID: 4839412859759377281
+      spriteID: e8639dac9112f7310800000000000000
+      internalID: 1404878003424016014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ryan espera_4
+      name: Ryan jump_5
       rect:
         serializedVersion: 2
         x: 40
+        y: 0
+        width: 15
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1e276426401eff0800000000000000
+      internalID: -8720904142790177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ryan jump_6
+      rect:
+        serializedVersion: 2
+        x: 72
         y: 0
         width: 14
         height: 30
@@ -203,29 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4619cc5d4dbb9f20800000000000000
-      internalID: 3430543681139578442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ryan espera_5
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 14
-        height: 31
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 316b6a065c08ffe70800000000000000
-      internalID: 9151174553058588179
+      spriteID: 15ab6d9a68252cf60800000000000000
+      internalID: 8053089822020385361
       vertices: []
       indices: 
       edges: []
